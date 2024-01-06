@@ -5,7 +5,7 @@ import keyboard
 keyboard = keyboard.add_hotkey
 
 #проверка сохранения
-with open('C:\Projects\PROJECTX\main\clicker\click.txt', 'r') as f:
+with open('ВАШ ПУТЬ К ФАЙЛУ, НАПРИМЕР: C:\Projects\PROJECTX\main\clicker\click.txt', 'r') as f:
     x = f.readline()
 #проверка на правильность сохранения
 if x.isdigit() == True:
@@ -28,7 +28,7 @@ main_menu = Menu() #создание верхнего меню
 def f11():
     root.attributes("-fullscreen", True)
 def esc():
-    with open('C:\Projects\PROJECTX\main\clicker\click.txt', 'w+') as f: #сохранение прогресса
+    with open('ВАШ ПУТЬ К ФАЙЛУ, НАПРИМЕР: C:\Projects\PROJECTX\main\clicker\click.txt', 'w+') as f: #сохранение прогресса
         x = f.write(str(a))
     root.destroy()
 keyboard('F11', f11) #контроль нажатия кнопки 'F11'
@@ -113,7 +113,7 @@ btn = tk.Button(text="Click", command=plus, width=20, height=4, bg='skyblue')
 btn.pack()
 
 def on_closing(): #функция сохранения прогресса при закрытии
-    with open('C:\Projects\PROJECTX\main\clicker\click.txt', 'w+') as f:
+    with open('ВАШ ПУТЬ К ФАЙЛУ, НАПРИМЕР: C:\Projects\PROJECTX\main\clicker\click.txt', 'w+') as f:
         x = f.write(str(a))
     root.destroy()
 
